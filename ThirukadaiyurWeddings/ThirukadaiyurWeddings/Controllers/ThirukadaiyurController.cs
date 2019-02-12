@@ -18,7 +18,7 @@ namespace ThirukadaiyurWeddings.Controllers
     {
         public ActionResult Thirukadaiyur_Temple()
         {
-            ViewBag.title = "Thirukadaiyur Temple Marriages Homams Booking | Call: +916379158216 | Abirami Arrangements";
+            ViewBag.title = "Thirukadaiyur Temple Marriages,Homams Booking | Call: +916379158216 | Abirami Arrangements";
             return View();
         }
 
@@ -31,14 +31,14 @@ namespace ThirukadaiyurWeddings.Controllers
 
         public ActionResult Hotels_Rooms_Food_in_Thirukadaiyur()
         {
-            ViewBag.Title = "Test heading test test-services";
+            ViewBag.Title = "Hotels,Rooms,Cottages in Thirukadaiyur | Call: +916379158216 | Abirami Arrangements";
 
             return View();
         }
 
         public ActionResult Thirukadaiyur_Temple_Contact_Details()
         {
-            ViewBag.Title = "Test heading test test-contact";
+            ViewBag.Title = "Thirukadaiyur Temple Booking Contact Details | Booking Call: +916379158216 | Abirami Arrangements"; 
 
             return View();
         }
