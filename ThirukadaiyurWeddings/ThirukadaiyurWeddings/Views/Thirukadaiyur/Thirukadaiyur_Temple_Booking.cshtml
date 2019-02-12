@@ -1,0 +1,139 @@
+﻿
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="jumbotron" style="  font-size:15px;   margin-top: 15px; ">
+            <form action="/Thirukadaiyur/Thirukadaiyur_Temple_Booking" id="OnlineForm" method="post">
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="Name">Couple Name</label>
+                        <input type="text" id="Name" name="Name" class="form-control" placeholder="type Mr and Mrs name">
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="mob">Mobile Number</label>
+                        <input type="text" id="mob" name="mob" class="form-control" placeholder="type mobile number">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="altermob">Alternete Mobile</label>
+                        <input type="text" id="altermob" name="altmob" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="date">Function Date</label>
+                        <input type="date" id="date" name="date" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="Abishegam">Type of Abishegam selection</label>
+                        <select id="Abishegam" name="abishegam" class="form-control">
+                            <option value="select">select..</option>
+                            <option value="16kalasa">16 kalasa Prathistai</option>
+                            <option value="27kalasa">27 kalasa Prathistai</option>
+                            <option value="32kalasa">32 kalasa Prathistai</option>
+                            <option value="64kalasa">64 kalasa Prathistai</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="days">Abishegam Days</label>
+                        <select id="days" class="form-control" name="abishegamdays">
+                            <option value="select">select..</option>
+                            <option value="1day">One day abishegam</option>
+                            <option value="2day">Two days abishegam</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" class="form-control" placeholder="type your location" name="location">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label for="Bhramin">Are you Bhramin?</label>
+                        <select id="Bhramin" class="form-control" name="brahmin">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+
+                        </select>
+                    </div>
+                </div>
+                <p style="color:darkblue">You need to pay just ₹2000 for temple marriage registration in devasthanam. Remaining amount can be paid directly at the end of your function.(if you are brahmin the registration should be ₹5000 because the pooja regulations will be differ and 10 priest will be performing pooja's)</p>
+                <input type="submit" class="btn btn-default" value="Submit & Book" />
+            </form>
+
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2 style="text-align:center">Pooja Details</h2>
+        <p>Following Pooja will be held one by one during your ceremony at thirukadaiyur temple-Yagha Pooja Starting from the day Morning with Couples Reception With Gajan (Elephant) and  Mangala Vadhyam</p>
+        <ul>
+            <li> Gaja Pooja</li>
+            <li> Cow Pooja                                              </li>
+            <li> Vigneshwara pooja                                      </li>
+            <li> 16 Kalasa Prethishtai & Pooja                          </li>
+            <li> Agni Karyam                                            </li>
+            <li> Sri Ganapathy Homam                                    </li>
+            <li> Navagraha Homam                                        </li>
+            <li> Mritthunjaya Homam                                     </li>
+            <li> Homam of the Life                                      </li>
+            <li> Dhanvanthri Oushatha Homam                             </li>
+            <li> Sashti Homam                                           </li>
+            <li> Durga Homam                                            </li>
+            <li> Sudharshana Homam                                      </li>
+            <li> Ashta Lakshmi Homam                                    </li>
+            <li> Maha Vishnu Homam                                      </li>
+            <li> Sashtiapthapoorthi / Bheemaratha /Sadhabishega  Homam  </li>
+            <li> Homam of the Whole Family Stars                        </li>
+            <li> Poornahuti                                             </li>
+            <li> Deeparadhanai                                          </li>
+            <li> Theertha Abhishekam                                    </li>
+            <li> Muhurtham                                              </li>
+            <li> Swami Tharisanam                                       </li>
+        </ul>
+        <p style="font-weight:bold">தாங்கள் வரும்போது கொண்டு வர வேண்டியவை​</p>
+        <ul>
+            <li> தம்பதிகளுக்கு முகூர்த்த புடவை & வேஷ்டி</li>
+            <li>  திருமாங்கல்யம்                                              </li>
+            <li>  காசி தீர்த்தம்(optional)                                      </li>
+            <li>  தானம் கழிக்க வேண்டிய புடவை மற்றும் துண்டு            </li>
+        </ul>
+    </div>
+</div>
+<p>Use this area to provide additional information.</p>
+<script type="text/javascript">
+
+
+    $("#OnlineForm").validate({
+        rules: {
+            ignore: ":not(:visible)",
+            date: {
+                required: true
+            },
+            mob: {
+                required: true
+            }
+
+        },
+        messages: {
+            date: {
+                required: '* Date field is required',
+            },
+            mob: {
+                required: '* Mobile number is required',
+            }
+        }
+    });
+   
+</script>
+
