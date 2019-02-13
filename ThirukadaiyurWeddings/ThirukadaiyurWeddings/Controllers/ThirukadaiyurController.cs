@@ -14,45 +14,48 @@ using System.Net;
 
 namespace ThirukadaiyurWeddings.Controllers
 {
+    
     public class ThirukadaiyurController : Controller 
     {
+        string Mobile = ConfigurationManager.AppSettings["PrimeryMobile"].ToString();
         public ActionResult Thirukadaiyur_Temple()
         {
-            ViewBag.title = "Thirukadaiyur Temple Marriages,Homams Booking | Call: +916379158216 | Abirami Arrangements";
+            ViewBag.title = "Thirukadaiyur Temple Marriages,Homams Booking | Call: "+ Mobile + " | Abirami Arrangements";
             return View();
         }
 
         public ActionResult Thirukadaiyur_Temple_Details_Cost()
         {
-            ViewBag.Title = "Thirukadaiyur Temple Marriages,Poojas Cost | Booking Call: +916379158216"; 
+            ViewBag.Title = "Thirukadaiyur Temple Marriages,Poojas Cost | Booking Call: "+ Mobile; 
 
             return View();
         }
 
         public ActionResult Hotels_Rooms_Food_in_Thirukadaiyur()
         {
-            ViewBag.Title = "Hotels,Rooms,Cottages in Thirukadaiyur | Call: +916379158216 | Abirami Arrangements";
+            ViewBag.Title = "Hotels,Rooms,Cottages in Thirukadaiyur | Call: " + Mobile + " | Abirami Arrangements";
 
             return View();
         }
 
         public ActionResult Thirukadaiyur_Temple_Contact_Details()
         {
-            ViewBag.Title = "Thirukadaiyur Temple Booking Contact Details | Booking Call: +916379158216 | Abirami Arrangements"; 
+            ViewBag.Title = "Thirukadaiyur Temple Booking Contact Details | Booking Call: " + Mobile + " | Abirami Arrangements"; 
 
             return View();
         }
 
         public ActionResult Thank_You()
         {
+            ViewBag.Title = "Abirami Arrangements Thirukadaiyur | Call: +916379158216 and +919585831457 ";
             return View();
         }
 
-        #region Post Methods for Bookings
+        #region Methods for Bookings & Enquiry
         [HttpGet]
         public ActionResult Thirukadaiyur_Temple_Booking()
         {
-            ViewBag.Title = "Thirukadaiyur Temple | 60th 70th 80th Marriages | Online Booking Call: +916379158216 ";
+            ViewBag.Title = "Thirukadaiyur Temple | 60th 70th 80th Marriages | Online Booking Call:" + Mobile;
 
             return View();
         }
@@ -152,18 +155,17 @@ namespace ThirukadaiyurWeddings.Controllers
                 throw (e);
             }
 
-
         }
 
         [HttpPost]
-        public ActionResult Thirukadaiyur_Temple_Contact_Details_Enquiry(string Name, string mobile, string address)
+        public ActionResult Thirukadaiyur_Temple_Contact_Details_Enquiry(string Name, string mobile, string Query)
         {
-            ViewBag.Title = "Test heading test test-contact";
+           
             try
             {
                 string body = (" Name:" + Name + "\n" +
                             " MobileNumber: " + mobile + "\n" +
-                            " Address: " + address);
+                            " Query: " + Query);
 
                 SendEmail(body, "New_Enquiry");
 
@@ -173,7 +175,6 @@ namespace ThirukadaiyurWeddings.Controllers
             {
                 throw (e);
             }
-
         }
 
         #endregion     

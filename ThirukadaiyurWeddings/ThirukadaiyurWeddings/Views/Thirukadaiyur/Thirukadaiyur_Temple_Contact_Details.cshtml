@@ -1,7 +1,8 @@
 ﻿
-<h2>@ViewBag.Title.</h2>
+<h2 style="text-align:center;">Enquiry? Clarifications? Need Help?</h2>
+<p style="text-align:center;">Thirukadaiyur abirami templa pooja's procedures, cost, homams, reservations,food arrangements etc...</p>
 
- 
+
 <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1542186754" />
 <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
 <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
@@ -11,48 +12,49 @@
 <div class="row">
     <div class="col-md-6">
         <div class="jumbotron" id="map" style="margin-top: 15px; height:500px;width:auto">
-           
+
 
         </div>
     </div>
     <div class="col-md-6" style="    margin-top: 62px;">
 
         <form action="/Thirukadaiyur/Thirukadaiyur_Temple_Contact_Details_Enquiry" id="Enquiry" method="post">
-            
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label for="mrname">Name</label>
-                        <input type="text" id="Name" name="Name" class="form-control" placeholder="type your name">
-                    </div>
-                </div>                
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label for="mobile">Contact Number</label>
-                        <input type="number"  id="mobile" name="mobile" class="form-control required customphone" placeholder="enter your mobile no ">
-                    </div>
+
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="mrname">Name</label>
+                    <input type="text" id="Name" name="Name" class="form-control" placeholder="type your name">
                 </div>
-                <div class="row form-group">
-                    <div class="col-md-12">
-                        <label for="fdate">Address</label>
-                        <textarea type="" id="address" name="address" class="form-control" placeholder="your address"></textarea>
-                    </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="mobile">Contact Number</label>
+                    <input type="number" id="mobile" name="mobile" class="form-control required customphone" placeholder="enter your mobile no ">
                 </div>
-                                  
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="fdate"> Your Query</label>
+                    <textarea type="" id="Query" name="Query" class="form-control" placeholder="type your query"></textarea>
+                </div>
+            </div>
+
             <input type="submit" class="btn btn-default" value="Call Me!" />
 
         </form>
         <br /><br />
 
         <address>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399<br />
+            Abirami Arrangements<br />
+            Sannathi Street,Thirukadaiyur<br />
             <abbr title="Phone">P:</abbr>
-            425.555.0100
+            +916379158216 and +919585831457
         </address>
 
         <address>
-            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+
+            <strong>Mail:</strong> <a href="mailto:abirami.arangements@gmail.com">abirami.arangements@gmail.com</a><br />
+            <strong>Web:</strong> <a href="https://www.thirukadaiyurweddings.com">www.thirukadaiyurweddings.com</a>
         </address>
 
     </div>
@@ -66,10 +68,10 @@
             mobile: {
                 required: true
             },
-           
+
         },
         messages: {
-            
+
         }
     });
 
