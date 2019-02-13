@@ -52,7 +52,7 @@ namespace ThirukadaiyurWeddings.Controllers
         [HttpGet]
         public ActionResult Thirukadaiyur_Temple_Booking()
         {
-            ViewBag.Title = "Test heading test test-booking";
+            ViewBag.Title = "Thirukadaiyur Temple | 60th 70th 80th Marriages | Online Booking Call: +916379158216 ";
 
             return View();
         }
