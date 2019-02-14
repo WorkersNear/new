@@ -30,9 +30,14 @@
 
         gtag('config', 'UA-131291778-1');
     </script>
+
+
 </head>
+
 <body>
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
+        
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,18 +45,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Thirukadaiyur Temple", "Thirukadaiyur_Temple", "Thirukadaiyur", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Thirukadaiyur Temple", "Thirukadaiyur_Temple", "Thirukadaiyur", new { area = "" }, new { @class = "navbar-brand" })               
             </div>
+          
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">                  
                     <li>@Html.ActionLink("Pooja's_&_Cost", "Thirukadaiyur_Temple_Details_Cost", "Thirukadaiyur")</li>
                     <li>@Html.ActionLink("Hotels_Rooms", "Hotels_Rooms_Food_in_Thirukadaiyur", "Thirukadaiyur")</li>                    
                     <li>@Html.ActionLink("Online Booking", "Thirukadaiyur_Temple_Booking", "Thirukadaiyur")</li>
                     <li>@Html.ActionLink("Help&Enquiry?", "Thirukadaiyur_Temple_Contact_Details", "Thirukadaiyur")</li>
+
                 </ul>
-            </div>
+                
+            </div>          
+            
         </div>
     </div>
+    
     <div class="container body-content">
         @RenderBody()
         <hr />

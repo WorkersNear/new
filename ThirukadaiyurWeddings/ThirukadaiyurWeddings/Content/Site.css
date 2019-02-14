@@ -38,3 +38,21 @@ textarea {
     height: auto;
     max-width: 100%;
 }
+  .glow {
+  
+  color: aqua;
+  font-weight:bold;
+ 
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+    @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px #194de6, 0 0 40px #194de6, 0 0 50px #194de6, 0 0 60px #194de6, 0 0 70px #194de6;
+  }
+  
+  to {
+    text-shadow: 0 0 20px aqua, 0 0 30px #1919e6, 0 0 40px #1919e6, 0 0 50px #1919e6, 0 0 60px #1919e6, 0 0 70px #1919e6, 0 0 80px #1919e6;
+  }
+}
