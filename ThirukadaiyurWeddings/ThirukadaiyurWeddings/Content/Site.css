@@ -56,3 +56,30 @@ textarea {
     text-shadow: 0 0 20px aqua, 0 0 30px #1919e6, 0 0 40px #1919e6, 0 0 50px #1919e6, 0 0 60px #1919e6, 0 0 70px #1919e6, 0 0 80px #1919e6;
   }
 }
+    .responsive {
+  width: 100%;
+  /*height: auto;*/
+}
+
+.table-responsive::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.table-responsive::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+.table-responsive::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    border-radius: 10px;
+    border: 2px solid darkblue;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    border-radius: 10px;  
+    background-color: #ffffff; 
+}
