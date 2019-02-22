@@ -35,7 +35,8 @@
 </head>
 
 <body>
-    
+    <div id="loader" style="display:block;"></div>
+    <div id="overlay" style="display:block;"></div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         
         <div class="container">
@@ -74,8 +75,25 @@
             <a href="https://twitter.com/AbiramiArrange1" target="_blank"> <i class="fa fa-twitter" aria-hidden="true" style="font-size: 25px;color: darkblue;cursor: pointer;" title="Visit Us on Twitter!"></i></a>
         </footer>
         
+        
     </div>    
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<script>
+    window.addEventListener('load', function () {
+
+        hideProgress();
+
+    }, false);
+    function showProgress() {
+        $("#loader").css("display", "block");
+        $("#overlay").css("display", "block");
+    }
+    function hideProgress() {
+        $("#loader").css("display", "none");
+        $("#overlay").css("display", "none");
+    }
+</script>
+
