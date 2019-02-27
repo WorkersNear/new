@@ -84,19 +84,21 @@ textarea {
     background-color: #ffffff; 
 }
 
+
+
 #loader {
     position: fixed;
     z-index: 1111;
     border: 10px solid #F0F8FF;
     border-radius: 50%;
-    border-top: 10px solid #00C6D7;
-    border-bottom: 10px solid #052963;    
+    border-top: 10px solid darkblue;
+    border-bottom: 10px solid aqua;    
     width: 50px;
     height: 50px;
-    -webkit-animation: spin 1s linear infinite; /* Safari */
+    
     animation: spin 1s linear infinite;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    top: 45%;
 }
 #overlay {
     position: fixed;
@@ -111,3 +113,7 @@ textarea {
     z-index: 1000;
     cursor: pointer;
 } 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
