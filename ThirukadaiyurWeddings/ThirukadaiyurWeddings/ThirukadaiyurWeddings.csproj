@@ -175,6 +175,7 @@
     <Content Include="Views\Thirukadaiyur\Payment.cshtml" />
     <Content Include="Views\Thirukadaiyur\HandleRequest.cshtml" />
     <Content Include="Views\Thirukadaiyur\Thank_You.cshtml" />
+    <Content Include="Views\Thirukadaiyur\Aayush_Homams_in_Thirukadaiyur.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

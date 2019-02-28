@@ -20,13 +20,21 @@ namespace ThirukadaiyurWeddings.Controllers
         string Mobile = ConfigurationManager.AppSettings["PrimeryMobile"].ToString();
         public ActionResult Thirukadaiyur_Temple()
         {
-            ViewBag.title = "Thirukadaiyur Temple Marriages,Homams Booking | Call: "+ Mobile + " | Abirami Arrangements";
+            ViewBag.title = "Thirukadaiyur Temple Marriages | Call: "+ Mobile + " | Abirami Arrangements";
             return View();
         }
 
         public ActionResult Thirukadaiyur_Temple_Details_Cost()
         {
-            ViewBag.Title = "Thirukadaiyur Temple Marriages,Poojas Cost | Booking Call: "+ Mobile; 
+            ViewBag.Title = "Thirukadaiyur Temple Marriages | Call: "+ Mobile; 
+
+            return View();
+        }
+
+        
+        public ActionResult Aayush_Homams_in_Thirukadaiyur()
+        {
+            ViewBag.Title = "Aayush Homams in Thirukadaiyur | Call: " + Mobile;
 
             return View();
         }
@@ -40,7 +48,7 @@ namespace ThirukadaiyurWeddings.Controllers
 
         public ActionResult Thirukadaiyur_Temple_Contact_Details()
         {
-            ViewBag.Title = "Thirukadaiyur Temple Booking Contact Details | Booking Call: " + Mobile + " | Abirami Arrangements"; 
+            ViewBag.Title = "Thirukadaiyur Temple Booking Contact Details | Call: " + Mobile + " | Abirami Arrangements"; 
 
             return View();
         }
@@ -74,9 +82,7 @@ namespace ThirukadaiyurWeddings.Controllers
                             " AbishegamDays :" + abishegamdays + "\n" +
                             " Bhramin : " + brahmin + "\n");
 
-                SendEmail(body, "New_Booking");
-
-                ViewBag.Title = "Test heading test test-booking";
+                SendEmail(body, "Marriage_Booking");                
 
                 if (!string.IsNullOrEmpty(Name))
                 {
@@ -148,6 +154,41 @@ namespace ThirukadaiyurWeddings.Controllers
                 }
                 TempData["fee"] = "1000";
 
+                return RedirectToAction("Payment");
+            }
+            catch (Exception e)
+            {
+                throw (e);
+            }
+
+        }
+        [HttpPost]
+        public ActionResult Aayush_Homams_in_Thirukadaiyur(string Name, string mob, string altmob, DateTime date,  string location, string brahmin)
+        {
+            try
+            {
+                string body = (" Name:" + Name + "\n" +
+                            " MobileNumber: " + mob + "\n" +
+                            " AlterneteMobile: " + altmob + "\n" +
+                            " FunctionDate :" + date + "\n" +
+                            " Location :" + location + "\n" +                           
+                            " Bhramin : " + brahmin + "\n");
+
+                SendEmail(body, "Aayush_Homams");
+
+                if (!string.IsNullOrEmpty(Name))
+                {
+                    TempData["customer"] = Name;
+                }
+
+                if (brahmin == "Yes")
+                {
+                    TempData["fee"] = "5000";
+                }
+                else
+                {
+                    TempData["fee"] = "2000";
+                }
                 return RedirectToAction("Payment");
             }
             catch (Exception e)
@@ -268,7 +309,7 @@ namespace ThirukadaiyurWeddings.Controllers
         public void SendEmail(string body, string subject)
         {
 
-            var fromAddress = new MailAddress("bala1991.phoenix@gmail.com", "New_Booking" + DateTime.Now);
+            var fromAddress = new MailAddress("bala1991.phoenix@gmail.com", subject + DateTime.Now);
             var toAddress = new MailAddress("abirami.arangements@gmail.com", "Abirami_Arrangements");
             const string fromPassword = "X3haquc6";
 

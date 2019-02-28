@@ -1,0 +1,90 @@
+﻿
+<h2 style="text-align:center;">test test test test test test</h2>
+<section id="AayushHomams">
+    <p style="text-align:center;">ASP.NET is a free web framework for building great Web sites and Web applications using HTML,CSS and JavaScript.</p>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <img src="~/Content/Images/img_bg_4.jpg" alt="Nature" class="responsive" width="400" height="300" />
+                <br />
+
+                <p style="font-size:13px;text-align:justify;">
+                    Performing Ayush homam in Thirukadaiyur is more effective. The word Ayusha means Age Ayusha homam is done to worship the god of life (Ayur Devatha ). By doing this homam, one gets long life blessings from Ayur Devatha. The Ayusha homam is done to worship the god of life. Ayusha homa is performed by learned purohits for long life and removal of all obstacles from life.
+                    In Thirukadaiyur It is believed that this temple(Markandeya Temple-T Manalmedu-1 KM from thirukadaiyur) was constructed where Shiva killed Yama, the God of death to protect his devotee Markandeya. Thus it is said that doing puja to Kalasamharamurthy or Shiva here prolongs one’s life. Ones a year this homa is recommended for healthy living and long life. If you are suffering from any ailment for long , then also Ayusah Homa is recommended
+
+                    Ayush Homams are Pujas performed for a particular deity by invoking Agni, the god of fire. The Sun is considered as the main source of energy, and fire is considered as a representation of the Sun's energy. To perform any Puja or Homam, first of all, a priest is appointed. While performing any Puja, first of all, the priest or Pandit ji perform the Puja of the Lord Ganesh as Lord Ganesh holds a unique position in the Indian culture and any ceremony, ritual, Puja or new undertaking begins with invoking the power of Ganesh, otherwise it is regarded as futile. A Kalash (brass or copper pot filled with sacred water) is placed with a coconut and different fruits, grains and betel leaves in front of it. After the Ganesh Puja is complete, then the Puja of the respective god or goddess and Yantra is performed on whose behalf the Homam is performed. This is done with the recitation of a Mantra for that particular deity with the offerings of water, Chandan (sandalwood) paste, Sindoor (vermilion), rice, milk mixed with floral-scented oil, flowers, fruits and sweets. After the Puja is completed by the priest, preparations are then made for the Yagna or Homams (sacred fire ritual) to be performed. This is the last part of the Puja and goes on for over an hour.
+                </p>
+                <form action="/Thirukadaiyur/Thirukadaiyur_Temple_Booking" id="OnlineForm" method="post" style="font-size:13px;text-align:justify;">
+
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="Name">Couple Name</label>
+                            <input type="text" id="Name" name="Name" class="form-control" placeholder="type Mr and Mrs name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="mob">Mobile Number</label>
+                            <input type="text" id="mob" name="mob" class="form-control" placeholder="type mobile number">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="altermob">Alternete Mobile</label>
+                            <input type="text" id="altermob" name="altmob" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="date">Function Date</label>
+                            <input type="date" id="date" name="date" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" class="form-control" placeholder="type your location" name="location">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Bhramin">Are you Bhramin?</label>
+                            <select id="Bhramin" class="form-control" name="brahmin">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+                    <p style="font-size:13px;color:darkblue">You need to pay just ₹2000 for temple marriage registration in devasthanam. Remaining amount can be paid directly at the end of your function.(if you are brahmin the registration should be ₹5000 because the pooja regulations will be differ and 10 priest will be performing pooja's)</p>
+                    <input type="submit" class="btn btn-default" value="Submit & Book" />
+                </form>
+            </div>
+
+        </div>
+
+</section>
+
+<script type="text/javascript">
+
+
+        $("#OnlineForm").validate({
+            rules: {
+                ignore: ":not(:visible)",
+                date: {
+                    required: true
+                },
+                mob: {
+                    required: true
+                }
+
+            },
+            messages: {
+                date: {
+                    required: '* Date field is required',
+                },
+                mob: {
+                    required: '* Mobile number is required',
+                }
+            }
+        });
+
+</script>
