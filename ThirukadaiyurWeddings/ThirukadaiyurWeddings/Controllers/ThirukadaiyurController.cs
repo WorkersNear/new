@@ -59,6 +59,12 @@ namespace ThirukadaiyurWeddings.Controllers
             return View();
         }
 
+        public ActionResult Thirukadaiyur()
+        {
+            ViewBag.Title = "Thirukadaiyur Temple Details | Call: +916379158216 and +919585831457 ";
+            return View();
+        }
+
         #region Methods for Bookings & Enquiry
         [HttpGet]
         public ActionResult Thirukadaiyur_Temple_Booking()

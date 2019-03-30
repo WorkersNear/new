@@ -130,14 +130,23 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\BnlrtoTKDR.JPG" />
+    <Content Include="Content\Images\CHNtoTKDR.JPG" />
+    <Content Include="Content\Images\CMBtoTKDR.JPG" />
     <Content Include="Content\Images\fav.png" />
     <Content Include="Content\Images\FB_IMG_1549349219940.jpg" />
     <Content Include="Content\Images\FB_IMG_1549349276513.jpg" />
     <Content Include="Content\Images\GooglePay_mark_800_gray_3x.png" />
     <Content Include="Content\Images\image.jpg" />
     <Content Include="Content\Images\img_bg_4.jpg" />
+    <Content Include="Content\Images\MYLtoTKDR.JPG" />
+    <Content Include="Content\Images\search.png" />
+    <Content Include="Content\Images\ThirukadaiyurMarriages.jpg" />
+    <Content Include="Content\Images\Thirukadaiyurmarriagesb.jpg" />
     <Content Include="Content\Images\Thirukadaiyur_Temple.jpg" />
     <Content Include="Content\Images\tkdr.jpg" />
+    <Content Include="Content\Images\TRItoTKDR.JPG" />
+    <Content Include="Content\Images\TrupathitoTKDR.JPG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -176,6 +185,7 @@
     <Content Include="Views\Thirukadaiyur\HandleRequest.cshtml" />
     <Content Include="Views\Thirukadaiyur\Thank_You.cshtml" />
     <Content Include="Views\Thirukadaiyur\Aayush_Homams_in_Thirukadaiyur.cshtml" />
+    <Content Include="Views\Thirukadaiyur\Thirukadaiyur.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
